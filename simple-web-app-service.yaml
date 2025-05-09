@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: simple-web-app-service
+spec:
+  selector:
+    app: simple-web-app
+  type: NodePort
+  ports:
+    - port: 3000           # Service port
+      targetPort: 3000     # Container port
+      nodePort: 31000      # Optional: exposed on this port (30000–32767)
+
+
+      
